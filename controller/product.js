@@ -1,6 +1,6 @@
 const fs = require("fs");
 const Product = require("../model/product");
-const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
+const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'data.json'), 'utf-8'));
 const products = data.products;
 
 exports.createProduct = async (req, res) => {
